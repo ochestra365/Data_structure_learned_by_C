@@ -36,5 +36,8 @@
     <ClCompile Include="포인터 엑세스.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2-9.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
