@@ -14,7 +14,7 @@
 //	printf("\n ptrArray[0]의 참조값 (*ptrArray[0])=%c", *ptrArray[0]);//참조 문자값
 //	printf("\n ptrArray[0]의 참조 문자열 (*ptrArray[0])=%s\n", *ptrArray);//참조 문자열을 통해 메모리 주소로 타고 들어가서 개행문자를 만나기 전까지 모두 출력
 //
-//	printf("\n ptrArray[1]의 주소 (&ptrArray[1]=&u)", &ptrArray[1]);//차기 주소값 초기 주소값과 완전히 다르다.
+//	printf("\n ptrArray[1]의 주소 (&ptrArray[1]=%u)", &ptrArray[1]);//차기 주소값 초기 주소값과 완전히 다르다.
 //	printf("\n ptrArray[1]의 값 (ptrArray[1]=%u", ptrArray[1]);//차기 주소가 가리키는 값 주소
 //	printf("\n ptrArray[1]의 참조값 (*ptrArray[1])=%c", *ptrArray[1]);//차기 배열요소의 첫번째 값
 //	printf("\n ptrArray[1]의 참조 문자열 (*ptrArray[1])=%s\n", *(ptrArray + 1));//참조 문자열을 통해 차기 버퍼를 모두 출력
