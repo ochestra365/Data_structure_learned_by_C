@@ -140,6 +140,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="2-10.c" />
+    <ClCompile Include="2-11.c" />
     <ClCompile Include="2-2.c" />
     <ClCompile Include="2-4.c" />
     <ClCompile Include="2-5.c" />
