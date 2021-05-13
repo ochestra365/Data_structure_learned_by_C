@@ -144,11 +144,16 @@
     <ClCompile Include="2-11.c" />
     <ClCompile Include="2-12.c" />
     <ClCompile Include="2-13.c" />
+    <ClCompile Include="2-14.c" />
+    <ClCompile Include="2-15하노이탑.c" />
     <ClCompile Include="2-2.c" />
     <ClCompile Include="2-4.c" />
     <ClCompile Include="2-5.c" />
     <ClCompile Include="2-7.c" />
     <ClCompile Include="2-9.c" />
+    <ClCompile Include="3-1.c" />
+    <ClCompile Include="3-2.c" />
+    <ClCompile Include="3-3.c" />
     <ClCompile Include="3_dimension_ary.c" />
     <ClCompile Include="배열테스트.c" />
     <ClCompile Include="포인터 엑세스.c" />
