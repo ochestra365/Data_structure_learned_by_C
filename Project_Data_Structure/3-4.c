@@ -6,10 +6,11 @@
 typedef struct {//구조체 정의
 	int degree;//차수다항식의 차수를 저장할 변수//지수라는 의미이다.
 	float coef[MAX_DEGREE];//계수//각 항의 계수를 저장할 1차원 배열//계수라는 의미이다.//배열의 출력값은 실수형이다.
+	//논리적, 물리적 주소가 같다. 그리고 할당된 공간은 50이다.
 }polynomial;//다항식의 라는 의미다.
- 
-polynomial addPoly(polynomial, polynomial);//출력 1개, 입력 2개 다항식은 다항식으로 출력되니 다항식 변수르 ㄹ쓴다.
-void printPoly(polynomial);
+ //시스템 설계의 필요성이 보이는 것이다.
+polynomial addPoly(polynomial, polynomial);//출력 1개, 입력 2개 다항식은 다항식으로 출력되니 다항식 변수를 쓴다.
+void printPoly(polynomial);//반환값이 없으니 따로 파라미터에 저장할 필요가 없다. 단지 출력화면에 표현할 용도이다.
 
 int main(void) {//다항식의 계수부분은 1차원 배열이 선언되었다.
 	polynomial A= { 3,{4,3,5,0} };//다항식의 초기화// A는 3차항의 정보를 가지고있다. 계수는1차원 배열로 선언
@@ -19,15 +20,15 @@ int main(void) {//다항식의 계수부분은 1차원 배열이 선언되었다.
 	polynomial C;//다항식 A,B를 덧셈을 시행할 값을 저장할 구조체변수
 	C = addPoly(A, B);//아직까지는 덧셈을 해주기 위한 함수호출 C는 A,B의 합을 리턴받아서 C에 저장한다.//반환 데이터 타입과 저장할 변수의 타입을 같게 해주어야 한다.
 	printf("\nA(x) = "); printPoly(A); //같은 기능을 해주는 함수들은 한 코드상에 써주는 것이 좋다.
-	printf("\nB(x)="); printPoly(B);
-	printf("\nC(x)="); printPoly(C);
+	printf("\nB(x)="); printPoly(B); //같은 기능을 해주는 함수들은 한 코드상에 써주는 것이 좋다.
+	printf("\nC(x)="); printPoly(C); //같은 기능을 해주는 함수들은 한 코드상에 써주는 것이 좋다.
 	return 0;
 }
 
 polynomial addPoly(polynomial A, polynomial B) {//지금 A와 B의 차수와 계수들을 모두 복사해왔다.
 	polynomial C; //다항식의 덧셈 결과를 저장할 구조체 변수 선언
-	int A_index = 0, B_index = 0, C_index = 0;//인덱스 초기화는 어떤 용도? 반복문을 제어해주기 위한 용도 계수가 저장되어 있는 1차원 배열의 논리적 주소를 지시하기 위한 용도다.
-	int A_degree = A.degree, B_degree = B.degree;//메인에서 복사해온 차수를 초기화된 함수의 지역변수에 대입한다.
+	int A_index = 0, B_index = 0, C_index = 0;//인덱스 초기화는 어떤 용도? 반복문을 제어해주기 위한 용도. 계수가 저장되어 있는 1차원 배열의 논리적 주소를 지시하기 위한 용도다.
+	int A_degree = A.degree, B_degree = B.degree;//메인에서 복사해온 차수를 초기화된 함수 멤버변수를 addpoly함수의 지역변수에 대입한다.
 	//지역변수에 메인의 매개변수를 받아서 복사 때려버린다.
 	C.degree = MAX(A.degree, B.degree);//매크로 활용이다. 해당 매크로는 A가 크면 A를 반환하고, 그렇지않으면 B를 반환한다.
 	//그 반환값을 C의 최고 차수에 대입하여 할당했다. 가장 초기 선언한 매크로의 로직을 그대로 쓸 수 있다.
@@ -43,7 +44,8 @@ polynomial addPoly(polynomial A, polynomial B) {//지금 A와 B의 차수와 계수들을 �
 			//고정된 최상위 차수에 대한 배열 인덱스가 반대라서 해당로직을 써야 하는 것이다.
 		}
 		else if (A.degree == B_degree) {
-			C.coef[C_index++] = A.coef[A_index++] + B.coef[B_index++];
+			C.coef[C_index++] = A.coef[A_index++] + B.coef[B_index++];//해석하면 같은 차수(인덱스)~후위연산자끼리 값을 더해서
+			//C의 차수에 넣어라는 의미다.
 			A_degree--;
 			B_degree--;
 		}
@@ -66,3 +68,4 @@ void printPoly(polynomial P) {//이 함수의 기능은 서식을 표현하기 위함이다.
 	printf("\n");
 }
 //구현파트는 버퍼, 알고리즘은 수학이다.
+//출력을 해주기 위해서는 A와 B가 초기화 되어야 하고 C가 마지막으로 A와 B를 더한 반환값이 저장되어야 한다.
