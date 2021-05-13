@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6af5b760-f17b-4ff8-a200-c31434214f08}</ProjectGuid>
-    <RootNamespace>ProjectDataStructure</RootNamespace>
+    <ProjectGuid>{2ea2af11-ecc7-4f0a-99e6-fb9ca9899a3c}</ProjectGuid>
+    <RootNamespace>Chapter4</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Chapter1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,25 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="2-10.c" />
-    <ClCompile Include="2-11.c" />
-    <ClCompile Include="2-12.c" />
-    <ClCompile Include="2-13.c" />
-    <ClCompile Include="2-14.c" />
-    <ClCompile Include="2-15하노이탑.c" />
-    <ClCompile Include="2-2.c" />
-    <ClCompile Include="2-4.c" />
-    <ClCompile Include="2-5.c" />
-    <ClCompile Include="2-7.c" />
-    <ClCompile Include="2-9.c" />
-    <ClCompile Include="3-1.c" />
-    <ClCompile Include="3-2.c" />
-    <ClCompile Include="3-3.c" />
-    <ClCompile Include="3-4.c" />
-    <ClCompile Include="3-5.c" />
-    <ClCompile Include="3_dimension_ary.c" />
-    <ClCompile Include="배열테스트.c" />
-    <ClCompile Include="포인터 엑세스.c" />
+    <ClCompile Include="inputNode.c" />
+    <ClCompile Include="inputNode2.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
