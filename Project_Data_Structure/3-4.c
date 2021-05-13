@@ -1,11 +1,11 @@
 #include <stdio.h>
 #define MAX(a,b)((a>b)?a:b)//매크로 a가 b보다 크면 a를 실행 매크로를 쓰면 함수를 구현해주지 않아도 수식 계산이 매우 편해진다.
 //나중에 헤더 파일에 넣어야 할 것들이다.
-#define MAX_DEGREE 50//최고 차수는 50까지이다.
+#define MAX_DEGREE 50//최고 넣을 수 있는 계수의 가짓수 50까지이다.-->시스템 함수일 거다.
 
 typedef struct {//구조체 정의
-	int degree;//차수다항식의 차수를 저장할 변수
-	float coef[MAX_DEGREE];//계수//각 항의 계수를 저장할 1차원 배열
+	int degree;//차수다항식의 차수를 저장할 변수//지수라는 의미이다.
+	float coef[MAX_DEGREE];//계수//각 항의 계수를 저장할 1차원 배열//계수라는 의미이다.//배열의 출력값은 실수형이다.
 }polynomial;//다항식의 라는 의미다.
  
 polynomial addPoly(polynomial, polynomial);//출력 1개, 입력 2개 다항식은 다항식으로 출력되니 다항식 변수르 ㄹ쓴다.
