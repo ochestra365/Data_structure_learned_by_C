@@ -39,6 +39,8 @@ polynomial addPoly(polynomial A, polynomial B) {//지금 A와 B의 차수와 계수들을 �
 			//구조체를 써서 순차 자료구조로 만들었다.
 			A_degree--;//차수를 하나씩 낮춰서 비교해간다.
 			//그래서 계수부분을 1차원 배열요소로써 불러올 수 있다.
+			//배열의 첫번 째 요소는 가장 최상위 차수이다.
+			//고정된 최상위 차수에 대한 배열 인덱스가 반대라서 해당로직을 써야 하는 것이다.
 		}
 		else if (A.degree == B_degree) {
 			C.coef[C_index++] = A.coef[A_index++] + B.coef[B_index++];
