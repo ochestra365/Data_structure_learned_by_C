@@ -141,8 +141,6 @@
   <ItemGroup>
     <ClCompile Include="inputNode.c" />
     <ClCompile Include="inputNode2.c" />
-    <ClCompile Include="노드 탐색.c" />
-    <ClCompile Include="노드삭제.c" />
     <ClCompile Include="단계별 문제 풀어보기.c" />
     <ClCompile Include="단방향 연결리스트.c" />
     <ClCompile Include="대현씨가 만든 거 전위 후위 코드_도저히 이해할 수 없어서 만든 거 보고 이해.c" />

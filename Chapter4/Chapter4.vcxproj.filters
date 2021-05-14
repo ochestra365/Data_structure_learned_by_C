@@ -33,11 +33,5 @@
     <ClCompile Include="전위 후위삽입 책.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="노드삭제.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="노드 탐색.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
