@@ -41,7 +41,7 @@
 //	node3->link = node4;
 //
 //	listNode* curr = head->link;//node1의 시작주소값 curr은 current의 약자로 현재 가리키고 있는 노드의 값을 나타낸다.
-//	while (curr != NULL) {//NULL을 만나면 반복문을 빠져 나온다.
+//	while (curr != NULL) {//NULL을 만나면 반복문을 빠져 나온다. 맨마지막 노드가 가리키는 노드는 없어서 NULL. 그래서 NULL을 만나면 반복문을 빠져나옴
 //		printf("%d\n", curr->data);
 //		curr = curr->link;//이건 다음 노드의 링크로 다가가는 값을 현재 가리키고 있는 값에 저장한것이다.
 //	}
