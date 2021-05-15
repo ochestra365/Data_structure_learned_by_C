@@ -20,18 +20,6 @@ Study
 엄청 고민하고 다른 사람의 코드를 보는 게 훨씬 도움이 된다.
 하나의 알고리즘은 하나의 단위다.(연결 자료구조는 하나의 리스트)
 ~~~
-
 ------------------
-## 1.알고리즘에 대한 접근
-<br>
-세상의 모든 
 
-## 5. 코드 파일 정리
-----------------
-![Chapter1](https://github.com/ochestra365/StudyAspNet21/tree/main/BasicMVCModel2/MyPortpolioWeb/Models "Model")<br>
-![Chapter2](https://github.com/ochestra365/StudyAspNet21/tree/main/BasicMVCModel2/MyPortpolioWeb/Views "View")<br>
-![Chapter3](https://github.com/ochestra365/StudyAspNet21/tree/main/BasicMVCModel2/MyPortpolioWeb/Controllers "데이터 읽기 및 저장 생성")<br>
-![Chapter4](https://github.com/ochestra365/StudyAspNet21/tree/main/BasicMVCModel2/MyPortpolioWeb/wwwroot "MainApp 구동")<br>
 
-## 6. 깨알 용어 정리
-----------------
