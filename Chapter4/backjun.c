@@ -1,3 +1,3 @@
-#define _CRT_SEUCRE_NO_WARNINGS
-#include <stdio.h>
-
+//#define _CRT_SEUCRE_NO_WARNINGS
+//#include <stdio.h>
+//
