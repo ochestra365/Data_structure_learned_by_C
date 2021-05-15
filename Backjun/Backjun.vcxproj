@@ -139,8 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="115431.cpp" />
     <ClCompile Include="1546.c" />
     <ClCompile Include="3052.c" />
+    <ClCompile Include="8959.c" />
     <ClCompile Include="Back 10951.c" />
     <ClCompile Include="back 1110.c" />
     <ClCompile Include="back_10818.c" />
