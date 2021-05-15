@@ -10,4 +10,4 @@ int main() {
 		scanf("%d", &score_ary[i]);
 	}
 	return 0;
-}
+}dd
