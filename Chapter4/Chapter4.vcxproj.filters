@@ -45,5 +45,8 @@
     <ClCompile Include="따라쓰는 자료구조_동우씨.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="대현씨가 만드 소스 코드 따라해보기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
