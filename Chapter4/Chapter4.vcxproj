@@ -146,7 +146,6 @@
     <ClCompile Include="단방향 연결리스트.c" />
     <ClCompile Include="대현씨가 만드 소스 코드 따라해보기.c" />
     <ClCompile Include="대현씨가 만든 거 전위 후위 코드_도저히 이해할 수 없어서 만든 거 보고 이해.c" />
-    <ClCompile Include="동우씨가 만든 단방향 연결 리스트.c" />
     <ClCompile Include="따라쓰는 연결 자료구조.c" />
     <ClCompile Include="따라쓰는 자료구조_동우씨.c" />
     <ClCompile Include="백준.c" />
