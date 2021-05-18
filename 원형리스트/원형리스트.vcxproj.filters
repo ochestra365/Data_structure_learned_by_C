@@ -18,5 +18,29 @@
     <ClCompile Include="원형리스트.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="strcpy.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="strcat.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="이중포인터.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="이중포인터2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15-5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15-6.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15-7.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stack.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
