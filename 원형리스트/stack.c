@@ -39,7 +39,7 @@ int isFull() {
 void push(int data) {
 	if (isFull()) {//일단 넣기 전에 가득 차 있는 지 아닌 지 확인
 		printf("STACK overflow!!\n");//가득 차 있으면 해당 출력값을 반환함.
-		return;
+		return;//에러가 뜨면 그 아래 명령문들은 실행이 안되야 해서 return 을 시킨다.
 	}
 	else {//0으로 만들어서 index변수값으로 사용한다
 		stack[++top] = data; //top=-1 1 증가 시키고 그 값을 연산에 사용한다. 원소를 넣고 나서 판단해야 한다. 배열에 사용하려고
