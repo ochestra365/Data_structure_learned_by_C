@@ -51,5 +51,11 @@
     <ClCompile Include="원형Q_liquidType.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="순차탐색.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="이진탐색.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

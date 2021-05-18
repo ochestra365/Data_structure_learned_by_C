@@ -142,6 +142,7 @@
     <ClCompile Include="15-5.c" />
     <ClCompile Include="15-6.c" />
     <ClCompile Include="15-7.c" />
+    <ClCompile Include="순차탐색.c" />
     <ClCompile Include="원형Q.c" />
     <ClCompile Include="원형Q_liquidType.c" />
     <ClCompile Include="stack2.c" />
@@ -151,6 +152,7 @@
     <ClCompile Include="원형리스트.c" />
     <ClCompile Include="이중포인터.c" />
     <ClCompile Include="이중포인터2.c" />
+    <ClCompile Include="이진탐색.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
