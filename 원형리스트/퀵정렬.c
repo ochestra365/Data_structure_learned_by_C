@@ -13,7 +13,8 @@ int main() {
 	quickSort(ary, 0, size - 1);//시작이 0부터 되니까 마지막 인덱스 값.
 	return 0;
 }
-void quickSort(int* pary, int left, int right) 
+//상태값을 만지는 거지 메모리를 직접 만지는 거는 아니다.
+void quickSort(int* pary, int left, int right) //인덱스 값을 만지기 위해서이다.
 {
 	if (left >= right) return;//기저조건
 	int pivot = left;
@@ -21,8 +22,8 @@ void quickSort(int* pary, int left, int right)
 	int Lleft = pivot + 1;//0번 기준값 자기자신과 비교할 필요는 없으니까
 	int Lright = right;//맨끝에서 부터 찾아본다.
 	while (Lleft <= Lright) {//교체가 안될 때까지 서로 비교한다. Lleft와 Lright가 교체가 안 될때까지 
-		while (pary[Lleft] <= pary[pivot]) Lleft++;//왼쪽부터 오른쪽으로 이동
-		while (pary[Lright] >= pary[pivot]&&Lright>left)Lright--;//오른쪽에서 왼쪽으로 이동 &&조건이 없으면 배열조건을 넘어서 실행이 되버림
+		while (pary[Lleft] <= pary[pivot]) Lleft++;//왼쪽부터 오른쪽으로 이동, 인덱스 값을 건든다.
+		while (pary[Lright] >= pary[pivot]&&Lright>left)Lright--;//오른쪽에서 왼쪽으로 이동 &&조건이 없으면 배열조건을 넘어서 실행이 되버림, 인덱스 값을 건든다.
 
 		if (Lleft > Lright) {//교체되었다. 작은 인덱스의 값이 작은 값이다. 
 			temp = pary[Lright];
@@ -39,6 +40,7 @@ void quickSort(int* pary, int left, int right)
 		printf("%d  ", pary[k]);
 	}
 	printf("\n");
-	quickSort(pary, left, Lright - 1);//아예 모른다.
-	quickSort(pary, Lright + 1, right);
-}
+	quickSort(pary, left, Lright - 1);//재귀를 밑에 달아줘서 다시 pivot값을 핸들링할 수 있게함
+	quickSort(pary, Lright + 1, right);//재귀를 밑에 달아줘서 다시 pivot값을 핸들링할수 있게함.
+	//그러면 피벗이 이동한 인덱스 배열요소 중간이 되어서 작은 리스트 두개로 나뉘게 되고 그 값끼리 정렬시키기 때문이다.
+}//while은 인덱스값의 좌극한과 우극한이 만나게 되는 미분개념과 유사하다. 그리고 재귀부분은 피벗값을 하나씩 오른쪽으로 옮겨서 리스트별로 배열시키는 상황을 의미한다.
