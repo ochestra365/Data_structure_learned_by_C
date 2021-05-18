@@ -27,38 +27,38 @@ int main() {
 }
 
 int isEmpty() {
-	if (top <= -1)return true;
-	else return false;
+	if (top <= -1)return true;//비어 있냐는 함수의 질문에 참이라고 대답함
+	else return false;//비어 있냐는 함수의 질문에 아니라고 대답함
 }
 
 int isFull() {
-	if (top >= STACK_SZ - 1) return true;//가득 차면 true값을 반환
-	else return false;
+	if (top >= STACK_SZ - 1) return true;//스택 사이즈만큼 차있으면 가득 차 있냐는 함수의 질문에 그렇다고 대답함.
+	else return false;//스택 사이즈만큼 차있으면 가득 차 있냐는 함수의 질문에 아니라고 대답함.
 }
 
 void push(int data) {
-	if (isFull()) {
-		printf("STACK overflow!!\n");
+	if (isFull()) {//일단 넣기 전에 가득 차 있는 지 아닌 지 확인
+		printf("STACK overflow!!\n");//가득 차 있으면 해당 출력값을 반환함.
 		return;
 	}
 	else {//0으로 만들어서 index변수값으로 사용한다
-		stack[++top] = data; //top=-1 1 증가 시키고 그 값을 연산에 사용한다. 원소를 넣고 나서 판단해야 한다.
+		stack[++top] = data; //top=-1 1 증가 시키고 그 값을 연산에 사용한다. 원소를 넣고 나서 판단해야 한다. 배열에 사용하려고
 	}
 }
 
 int pop() {//공백상태인지 알아야 한다.
-	if (isEmpty()) {
-		printf("STACK underflow");
+	if (isEmpty()) {//일단 빼기 전에 공백인 지 아닌 지 확인
+		printf("STACK underflow");//비어 있으면 해당 출력값을 반환함
 		return;
 	}
 	else {
-		return stack[top--];//-1 사용하고 나서 -1을 빼줘야 한다. 원소를 빼고 나서 판단해야 한다.
+		return stack[top--];//-1 사용하고 나서 -1을 빼줘야 한다. 원소를 빼고 나서 판단해야 한다. 이전 배열요소를 반환하니까 지금 배열요소는 휘발되어 버림.
 	}
 }
 int peek() {
-	if (isEmpty()) {
+	if (isEmpty()) {//비어 있느냐 
 		printf("STACK underflow!!\n");
-		exit(1);
+		exit(1);//프로그램 종료
 	}
 	else return stack[top];
 }
@@ -71,3 +71,4 @@ void printStack() {
 }
 
 //스택 구조를 순차자료구조에 의해서 만든 것이다.
+//메모리에는 각 결과값이 저장되어 있는 데, 논리적으로는 넣고 빼고가 되는 거다.
