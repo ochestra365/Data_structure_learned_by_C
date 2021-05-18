@@ -12,7 +12,7 @@ typedef struct {
 
 TStack* createHead(void) {
 	TStack* T = (TStack*)malloc(sizeof(TStack));
-	if (T != NULL)T->topstk = NULL;
+	if (T != NULL)T->topstk = NULL;//스택이 존재하면
 	return T;
 }
 int isEmpty(TStack* ptstack) 
@@ -38,11 +38,11 @@ int pop(TStack* ptstack)
 		return;
 	}
 	else {//이거 분석해보기
-		data = ptstack->topstk->data;
-		temp = ptstack->topstk;
-		ptstack->topstk = ptstack->topstk->link;
-		free(temp);
-		return data;
+		data = ptstack->topstk->data;//data 값에 맨 위 노드값을 넣어준다.
+		temp = ptstack->topstk;//temp값에 주소값을 넣는다.
+		ptstack->topstk = ptstack->topstk->link;//맨 위 탑 헤더에 링크를 넣어준다. 논리적으로 탑의 상태를 변경해주고 기존의 탑은 제거해버림
+		free(temp);//템프 반환
+		return data;//data를 휘발시켜버림
 	}
 }
 int peek(TStack* ptstack) {
@@ -51,13 +51,13 @@ int peek(TStack* ptstack) {
 		return;
 	}
 	else {
-		return ptstack->topstk->data;
+		return ptstack->topstk->data;//data를 넣는다.
 	}
 }
 void printStack(TStack* ptstack) {
 	Snode* curr = ptstack->topstk;
 	while (curr != NULL) {
-		printf("%d    ", curr->data);
+		printf("%d\n", curr->data);
 		curr = curr->link;
 	}
 
@@ -67,6 +67,9 @@ int main() {
 	push(h, 10);
 	push(h, 20);
 	push(h, 30);
+	push(h, 40);
+	printStack(h);
+	pop(h);
 	printStack(h);
 	return 0;
 }

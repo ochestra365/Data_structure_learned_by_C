@@ -42,10 +42,13 @@
     <ClCompile Include="stack.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Q.c">
+    <ClCompile Include="원형Q.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="stack2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="원형Q_liquidType.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

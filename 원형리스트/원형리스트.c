@@ -40,9 +40,9 @@
 //	}
 //}
 //void insertFirstNode(HeadNode* phead, Node* newNode) {//수열의 초항
-//	if (phead->head == NULL) {//공백리스트일 때
-//		phead->head = newNode;
-//		newNode->link = newNode;
+//	if (phead->head == NULL) {//공백리스트일 때,, 노드를 처음 만들 떄
+//		phead->head = newNode;//리스트의 처음 노드가 newNode가 된다.
+//		newNode->link = newNode;//새로 받은 메모리의 링크값을 NULL로 털어준다.
 //	}
 //	else {
 //		newNode->link = phead->head;
@@ -55,7 +55,7 @@
 //	//tempNode = phead->head;
 //	if (phead->head == NULL) {//공백리스트일 때
 //		phead->head = newNode;
-//		newNode->link = newNode;
+//		newNode->link = newNode;//이거 아닐듯.. 
 //	}
 //	else {
 //		newNode->link = phead->head;//마지막 노드를 가리키면 curr노드를 따로 만들어서 움직일 필요가 없다.

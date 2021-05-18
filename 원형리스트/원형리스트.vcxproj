@@ -142,7 +142,8 @@
     <ClCompile Include="15-5.c" />
     <ClCompile Include="15-6.c" />
     <ClCompile Include="15-7.c" />
-    <ClCompile Include="Q.c" />
+    <ClCompile Include="원형Q.c" />
+    <ClCompile Include="원형Q_liquidType.c" />
     <ClCompile Include="stack2.c" />
     <ClCompile Include="strcat.c" />
     <ClCompile Include="strcpy.c" />
