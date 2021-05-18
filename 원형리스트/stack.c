@@ -13,11 +13,16 @@ int pop(void);//스택에 출력
 int peek(void);//맨위의 스택 확인
 void printStack(void);
 int stack[STACK_SZ];
-int top = -1;//현재 스택의 위치를 나타내는 것이다. 스택에 몇 개의 데이터가 입력되어 있는 지 확인도 가능하다. 항상 맨 위를 가리킨다.
+int top = -1;//현재 스택의 위치를 나타내는 것이다. 스택에 몇 개의 데이터가 입력되어 있는 지 확인도 가능하다. 항상 맨 위를 가리킨다. 그냥 상태값이다.
 //스택 원소의 가장 맨위에 있는 값을 드러낸다.
 
 int main() {
-
+	push(10);
+	push(11);
+	push(12);
+	pop();
+	push(13);
+	printStack();
 	return 0;
 }
 
@@ -57,3 +62,12 @@ int peek() {
 	}
 	else return stack[top];
 }
+void printStack() {
+	if (!isEmpty()) {
+		for (int i = 0; i <= top; i++) {
+			printf("%d   ", stack[i]);
+		}
+	}
+}
+
+//스택 구조를 순차자료구조에 의해서 만든 것이다.
