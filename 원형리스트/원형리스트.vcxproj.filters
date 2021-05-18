@@ -63,5 +63,8 @@
     <ClCompile Include="선택.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="퀵정렬.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
