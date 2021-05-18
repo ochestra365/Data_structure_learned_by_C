@@ -63,6 +63,10 @@ void printStack(TStack* ptstack) {
 
 }
 int main() {
-
+	TStack* h = createHead();
+	push(h, 10);
+	push(h, 20);
+	push(h, 30);
+	printStack(h);
 	return 0;
 }
