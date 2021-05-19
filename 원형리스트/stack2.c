@@ -12,7 +12,7 @@ typedef struct {
 
 TStack* createHead(void) {
 	TStack* T = (TStack*)malloc(sizeof(TStack));
-	if (T != NULL)T->topstk = NULL;//스택이 존재하면
+	if (T != NULL)T->topstk = NULL;//스택리스트가 존재하면
 	return T;
 }
 int isEmpty(TStack* ptstack) 
@@ -26,6 +26,7 @@ void push(TStack* ptstc, int data) {
 	newNode->data = data;
 	newNode->link = ptstc->topstk;//윗노드가 아랫노드를 가리키게 해야 한다. 그래야 윗노드를 삭제해도 아무 문제가 없다. 헤드에 있는 필드에 들어가 있는 값을 새로운 노드의 링크에 저장
 	//top은 상태를 나타낸다.
+	//그리고 그림 그려보면 위 쪽 데이터를 없애야 아랫쪽데이터를 확인하거나 없앨 수 있는데, 이는 데이터의 무결성을 위한것이다.
 	//pop시 아래에서 위를 가리키면 NULL값을 가리키게 된다.
 	ptstc->topstk = newNode;
 }

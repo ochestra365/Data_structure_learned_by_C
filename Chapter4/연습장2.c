@@ -1,51 +1,27 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdbool.h>
-#define STACK_SZ
-int isEmpty(void);
-int isFull(void);
-void push(int);
-int pop(void);
-int peek(void);
-void printStack(void);
-int stack[STACK_SZ];
-int top = -1;
-int main() {
 
-	return 0;
+typedef struct snode {
+	int data;
+	struct snode* link;
+}Snode;
+
+typedef struct {
+	Snode* topstk;
+}TStack;
+TStack* createHead(void) {
+	TStack* T = (TStack*)malloc(sizeof(TStack));
+	if (T != NULL)T->topstk = NULL;
+	return T;
 }
-int isEmpty() {
-	if (top <= -1)return true;
+int isEmpty(TStack* ptstack)
+{
+	if (ptstack->topstk == NULL)return true;
 	else return false;
 }
-int isFull() {
-	if (top >= STACK_SZ - 1)return true;
-	else return false;
+void push(TStack* ptstc, int data) {
+	Snode* newNode = (Snode*)malloc(sizeof(Snode));
+	if (newNode == NULL)return;
+	newNode->data = data;
+	newNode->link = ptstc->topstk;
 }
-void push(int data) {
-	if (isFull()) {
-		printf("STACK overflow\n");
-		return;
-	}
-	else {
-		stack[++top] = data;
-	}
-}
-int pop() {
-	if (isEmpty()) {
-		printf("STACK underflow");
-		return;
-	}
-	else {
-		return stack[top--];
-	}
-}
-int peek() {
-	if (isEmpty()) {
-		printf("STACK underflow\n");
-		exit(1);
-	}
-	else return stack[top];
-}
-
-void

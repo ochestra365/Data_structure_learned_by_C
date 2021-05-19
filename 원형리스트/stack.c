@@ -65,8 +65,8 @@ int peek() {
 }
 void printStack() {
 	if (!isEmpty()) {
-		for (int i = 0; i <= top; i++) {
-			printf("%d   ", stack[i]);
+		for (int i = 0; i <= top; i++) {//배열의 시작은 0
+			printf("%d   ", stack[i]);//데이터값 출력 부분
 		}
 	}
 }
