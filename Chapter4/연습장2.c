@@ -23,3 +23,21 @@ int isFull() {
 	if (front == (rear + 1) % SIZE)return true;
 	else return false;
 }
+void enQueue(int data) {
+	if (isFull())printf("Queue overflow\n");
+	else {
+		rear = rear % SIZE;
+		queue[rear] = data;
+		rear++;
+	}
+}
+
+int deQueue() {
+	if (isEmpty()) {
+		pritnf("Queue underflow\n");
+		return;
+	}
+	else {
+		return queue[front++ % SIZE];
+	}
+}

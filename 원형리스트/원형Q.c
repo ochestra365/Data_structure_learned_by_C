@@ -41,16 +41,16 @@ int isFull() {//포화조건
 void enQueue(int data) {
 	if (isFull()) printf("Queue overflow\n");
 	else {
-		rear = rear % SIZE;
+		rear = rear % SIZE;//정해놓은 방의 크기를 벗어나지 않도록 제어
 		queue[rear] = data;
 		rear++;
 	}
 }
 
-int deQueue() {
+int deQueue() {//삭제되어야 할 노드를 가르쳐주는 거지 물리적으로 삭제는 되지 않았다.
 	if (isEmpty()) {
 		printf("Queue underflow!!\n");
-		return;
+		return;//조건을 만족하면 아래 연산을 시행하지 않게 한다.
 	}
 	else {
 		return queue[front++ % SIZE];
