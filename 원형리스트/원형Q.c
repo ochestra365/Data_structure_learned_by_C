@@ -35,6 +35,7 @@ int isFull() {//포화조건
 	if (front == (rear + 1) % SIZE) return true;//배열 방의 인덱스를 0~5까지 하게 한다. SIZE는 5이다. rear는 항상 다음에 들어갈 것을 의미한다. 논리적으로 하나 더 늘어난 것이다.
 	//방 크기가 계속 늘어나게 되서 순차적으로 데이터를 집어넣을 수 있게 한다. 방을 더 집어 넣을 필요가 없다.
 	else return false;
+	//입력될 것이 전체 방의 크기보다 1더 크다면 이것은 overflow 즉 꽉차 있는 것을 의미한다.
 }
 
 void enQueue(int data) {

@@ -1,27 +1,25 @@
 #include <stdio.h>
 #include <stdbool.h>
+#define SIZE 5
 
-typedef struct snode {
-	int data;
-	struct snode* link;
-}Snode;
+int isEmpty();
+int isFull();
+void enQueue(int);
+int deQueue();
 
-typedef struct {
-	Snode* topstk;
-}TStack;
-TStack* createHead(void) {
-	TStack* T = (TStack*)malloc(sizeof(TStack));
-	if (T != NULL)T->topstk = NULL;
-	return T;
+int rear = 0;
+int front = 0;
+int queue[SIZE];
+
+int main() {
+
+	return 0;
 }
-int isEmpty(TStack* ptstack)
-{
-	if (ptstack->topstk == NULL)return true;
+int isEmpty() {
+	if (rear == front)return true;
 	else return false;
 }
-void push(TStack* ptstc, int data) {
-	Snode* newNode = (Snode*)malloc(sizeof(Snode));
-	if (newNode == NULL)return;
-	newNode->data = data;
-	newNode->link = ptstc->topstk;
+int isFull() {
+	if (front == (rear + 1) % SIZE)return true;
+	else return false;
 }
