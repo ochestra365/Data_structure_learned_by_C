@@ -66,5 +66,8 @@
     <ClCompile Include="퀵정렬.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="..\Chapter4\퀵정렬 책.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

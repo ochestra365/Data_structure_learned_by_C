@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Chapter4\퀵정렬 책.c" />
     <ClCompile Include="15-5.c" />
     <ClCompile Include="15-6.c" />
     <ClCompile Include="15-7.c" />

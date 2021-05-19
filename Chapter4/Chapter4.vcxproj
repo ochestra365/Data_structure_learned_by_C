@@ -149,7 +149,6 @@
     <ClCompile Include="따라쓰는 연결 자료구조.c" />
     <ClCompile Include="따라쓰는 자료구조_동우씨.c" />
     <ClCompile Include="백준.c" />
-    <ClCompile Include="연습장2.c" />
     <ClCompile Include="전위 후위삽입 책.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
