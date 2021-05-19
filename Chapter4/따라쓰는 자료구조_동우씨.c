@@ -80,20 +80,20 @@ void delAllNode(HeadNode* h)
 		printf("삭제할 리스트가 비어있스빈다.\n");
 	}
 	else {
-		Node* curr = h->head;
-		Node* temp;
-		while (curr != NULL) {
-			temp = curr->next;
-			free(curr);
-			curr = temp;
+		Node* curr = h->head;//순회노드가 링크타고 가면서 다음 노드들을 가리킨다.
+		Node* temp;//삭제한 노드의 다음값을 저장할 링크
+		while (curr != NULL) {//마지막 노드가 가리키는 값은 NULL이다. 그러니까 리스트를 죄다 돈 다는 말이다.
+			temp = curr->next;//템프에 현재 노드가 가리키는 노드 주소값을 주고
+			free(curr);//현재 노드를 지운다.
+			curr = temp;//현재 노드에 삭제된 노드가 가리키는 주소값을 준다.
 		}
-		h->head = NULL;
+		h->head = NULL;//마지막으로 리스트까지 지워준다.
 		printf("삭제완료\n");
 	}
 }
 
 Node* searchNode(HeadNode* h, int data) {
-	Node* s = h->head;
+	Node* s = h->head;//무조건 링크타고 들어가기 때문에 노드의 시작을 알리는 것을 이용한다.
 	int i = 1;
 	while (s != NULL) {
 		if (s->data == data) {
@@ -114,27 +114,27 @@ Node* delNode(HeadNode* h, Node* temp) {
 	Node* curr;
 	if (h == NULL) {
 		printf("헤드가 NULL입니다.\n");
-		return;
+		return;//함수 내에서 return은 아래 연산을 시행하지 않겠다는 의미이다.
 	}
 	if (temp == NULL) {
 		printf("검색한 노드가 NULL입니다.\n");
 	}
-	else if (h->head->next == NULL) {
+	else if (h->head->next == NULL) {//리스트만 생성되어 있고 노드가 생성되어 있지 않다.
 		h->head = h->head->next;
 		free(temp);
 		return;
 	}
 	else {
 		curr = h->head;
-		if (curr == temp) {
+		if (curr == temp) {//노드가 존재하지만 모든 리스트를 삭제하겠다.
 			h->head = temp->next;
 			free(temp);
 			return;
 		}
-		while (curr->next != temp) {
+		while (curr->next != temp) {//삭제할 노드의 이전 노드까지 타고들어간다.
 			curr = curr->next;
 		}
-		curr->next = temp->next;
+		curr->next = temp->next;//삭제할 노드가 가리키는 주소값을 현재 노드의 주소값으로 준다.
 		free(temp);
 	}
 }

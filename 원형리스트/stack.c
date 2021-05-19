@@ -12,9 +12,9 @@ void push(int);//스택에 입력
 int pop(void);//스택에 출력
 int peek(void);//맨위의 스택 확인
 void printStack(void);
-int stack[STACK_SZ];
+int stack[STACK_SZ];//스택 생성
 int top = -1;//현재 스택의 위치를 나타내는 것이다. 스택에 몇 개의 데이터가 입력되어 있는 지 확인도 가능하다. 항상 맨 위를 가리킨다. 그냥 배열요소의 인덱스 값을 드러내는 상태값이다.
-//스택 원소의 가장 맨위에 있는 값을 드러낸다.
+//스택 원소의 가장 맨위에 있는 값을 드러낸다.//배열 이용하니까
 
 int main() {
 	push(10);
@@ -53,6 +53,7 @@ int pop() {//공백상태인지 알아야 한다.
 	}
 	else {
 		return stack[top--];//-1 사용하고 나서 -1을 빼줘야 한다. 원소를 빼고 나서 판단해야 한다. 이전 배열요소를 반환하니까 지금 배열요소는 휘발되어 버림.
+		//맨위의 원소를 뺴고나서 카운트를 감해주는 것이다.(배열이용)
 	}
 }
 int peek() {
@@ -60,7 +61,7 @@ int peek() {
 		printf("STACK underflow!!\n");
 		exit(1);//프로그램 종료A
 	}
-	else return stack[top];
+	else return stack[top];//가장 위에 있는 탑값을 반환
 }
 void printStack() {
 	if (!isEmpty()) {

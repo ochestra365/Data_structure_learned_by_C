@@ -60,10 +60,10 @@ void insertMiddleNode(linkedList_h *L ,listnode*pre,char* x) {
 		newNode->link = NULL;//새 노드를 첫번째이자 마지막 노드로 연결(왜냐하면 마지막 노드의 link값은 null이기 때문이다.)
 		L->head = newNode;//새노드의 시작데이터 값
 	}
-	else if (pre == NULL) {
+	else if (pre == NULL) {//리스트는 있지만 노드가 생성되어 있지 않을 때
 		L->head = newNode;
 	}
-	else {
+	else {//리스트에 노드가 존재할 때,
 		newNode->link = pre->link;//포인터 pre의 노드 뒤에 새 노드 연결
 		pre->link = newNode;
 	}
@@ -110,7 +110,7 @@ listnode* searchNode(linkedList_h *L, char* x) {
 	temp = L->head;//L->head를 조작해버리면 메인의 구조체포인터를 조작하는 거다. 그래서 temp값으로 찾아주는 거다. 메인은 소중하니까
 	//공백리스트를 타고 넘어가게 해준다.
 	while (temp != NULL) {//temp의 link파트는 NULL이다.//순차적으로 싹다 처음부터 끝까지 찾아볼건데
-		if (strcmp(temp->data, x) == 0)return temp;//헤드에서 끝까지 논리지시자가 달리다가 서로 같은 값을 찾으면 그 그값을 반환한다.
+		if (strcmp(temp->data, x) == 0)return temp;//헤드에서 끝까지 지시자가 달리다가 서로 같은 값을 찾으면 그 그값을 반환한다.
 		else temp = temp->link;//그게 아니라면 temp를 다음리스트의 시작주소값으로 옮긴다.
 	}
 	return temp;//만약 찾는 것이 없으면 NULL값을 반환한다.
