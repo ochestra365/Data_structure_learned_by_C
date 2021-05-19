@@ -1,43 +1,29 @@
 #include <stdio.h>
-#include <stdbool.h>
-#define SIZE 5
 
-int isEmpty();
-int isFull();
-void enQueue(int);
-int deQueue();
-
-int rear = 0;
-int front = 0;
-int queue[SIZE];
-
+void insertionSort(int*, int);
+void print(int*, int);
 int main() {
-
+	int ary[] = { 4,2,7,5,9,1,8,3,6 };//√ ±‚»≠
+	int size = sizeof(ary) / sizeof(ary[0]);
+	insertionSort(ary, size);
 	return 0;
 }
-int isEmpty() {
-	if (rear == front)return true;
-	else return false;
-}
-int isFull() {
-	if (front == (rear + 1) % SIZE)return true;
-	else return false;
-}
-void enQueue(int data) {
-	if (isFull())printf("Queue overflow\n");
-	else {
-		rear = rear % SIZE;
-		queue[rear] = data;
-		rear++;
+void insertionSort(int*pary, int sz) {
+	int temp;
+	for (int i = 1; i < sz; i++) {
+		for (int j = i; j > 0; j--) {
+			if (pary[j] < pary[j - 1]) {
+				temp = pary[j];
+				pary[j] = pary[j - 1];
+				pary[j - 1] = temp;
+
+			}
+		}
 	}
 }
 
-int deQueue() {
-	if (isEmpty()) {
-		pritnf("Queue underflow\n");
-		return;
-	}
-	else {
-		return queue[front++ % SIZE];
+void print(int* pary, int sz) {
+	for (int i = 0; i < sz; i++) {
+		printf("ary[%d]=%d\n", i, pary[i]);
 	}
 }
