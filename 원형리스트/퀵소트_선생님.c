@@ -1,22 +1,21 @@
 #include <stdio.h>
 void quicksort(int*, int, int);//퀵소트 함수 매개변수 선언
-//왼쪽리스트는 피벗값보다 큰 값이 논리지시자에서 체크되고, 오른쪽 리스트는 피벗값보다 작은 값이 논리지시자에서 체크된다.
+//왼쪽파티션은 피벗값보다 큰 값이 논리지시자에서 체크되고, 오른쪽 파티션은 피벗값보다 작은 값이 논리지시자에서 체크된다.
 //그리고 잡힌 둘의 위치를 스왑한다.
 //피벗을 기준으로 왼쪽 파티션에는 피벗보다 작은 값이, 그리고 오른쪽 파티션에는 피벗보다 큰 값이 모인다.
 //재귀로 리스트를 새로 생성할 때, 각각 2개의 배열요소끼리 경쟁시킨다.
 //나눠진 모든 하위 리스트를 다시 논리적으로 결합하면 완벽하게 오름차순으로 정렬된 배열이 등장하게 된다.
 int main() {
-	int size;
 	int ary[] = { 3,5,2,4,7,6,1,8 };
 	int size = sizeof(ary) / sizeof(ary[0]);
 	printf("ary [] : 3, 5, 2, 4, 7, 6, 1, 8 \n\n");
-	quicksort(ary, 0, size - 1);//ary 배열을 이용할 것이고, 첫번째 인덱스부터 마지막 인덱스까지 알고리즘으로 사용할 것이다.
+	quicksort(ary, 0, size - 1);//ary 배열을 이용할 것이고, 첫번째 인덱스부터 마지막 인덱스까지 실인수로 사용할 것이다.
 	return 0;
 }
 void quicksort(int* pary, int left, int right) {//1차원 배열이기 때문에
 	int lidx = left, ridx = right;//왼쪽 인덱스는 가장 왼쪽의 인덱스명, 오른쪽 은 가장 오른쪽의 인덱스명.
 	int temp;//템프값
-	int pivot = (left + right) / 2;//기준(pivot)은 가장 생성된 리스트의 중간이 될 것이다.
+	int pivot = (left + right) / 2;//기준(pivot)은 가장 최근에 생성된 리스트의 중간이 될 것이다.
 	printf("pivot - index : %d, value : %d\n", pivot, pary[pivot]);
 	while (lidx <= ridx) {//왼쪽 논리지시자와 오른쪽 논리지시자가 교차되면 반복문을 탈출하여 재귀함수의 영역을 핸들링 할 것이다.
 		//왼쪽 리스트
