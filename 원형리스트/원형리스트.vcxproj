@@ -156,6 +156,7 @@
     <ClCompile Include="이중포인터.c" />
     <ClCompile Include="이중포인터2.c" />
     <ClCompile Include="이진탐색.c" />
+    <ClCompile Include="퀵소트_선생님.c" />
     <ClCompile Include="퀵정렬.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
