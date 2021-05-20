@@ -18,5 +18,8 @@
     <ClCompile Include="BinaryTree.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="이진 탐색 트리의 연산프로그램.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
