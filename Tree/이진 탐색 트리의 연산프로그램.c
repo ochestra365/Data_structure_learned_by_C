@@ -13,20 +13,24 @@ void deleteNode(treeNode* root, element key);//루트 노드부터 탐색하여 키값과 같�
 void displayInorder(treeNode* root); 
 
 int main() {
-
+	treeNode* root = NULL;
+	searchBST(root, 'k');
 	return 0;
 }
 
 treeNode* searchBST(treeNode* root, char x) {
-	treeNode* p;
-	p = root;
-	while (p != NULL) {
-		if (x < p->key)p = p->left;
-		else if (x == p->key)return p;
-		else p = p->right;
+	if (root == NULL)printf("생성된 노드가 없습니다.");
+	else {
+		treeNode* p;
+		p = root;
+		while (p != NULL) {
+			if (x < p->key)p = p->left;
+			else if (x == p->key)return p;
+			else p = p->right;
+		}
+		printf("\n 찾는 키가 없습니다.");
+		return p;
 	}
-	printf("\n 찾는 키가 없습니다.");
-	return p;
 }
 
 treeNode* inserNode(treeNode* p, char x) {
