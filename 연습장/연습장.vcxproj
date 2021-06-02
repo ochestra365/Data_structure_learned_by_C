@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="단순연결 프로그램.c" />
     <ClCompile Include="원형 연결 리스트.c" />
+    <ClCompile Include="이중 연결리스트.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

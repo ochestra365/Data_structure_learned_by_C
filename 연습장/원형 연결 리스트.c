@@ -67,7 +67,7 @@ void insertMiddleNode(h* CL, listNode* pre, char* x) {
 		pre->link = newNode;
 	}
 }
-//원형 연결 리스트의 pre뒤에 있는 노드 old를 삭제하는 연산
+//원형 연결 리스트의 pre뒤에 있는 노드 old를 삭제하는 연산 이전노드 삭제
 void deleteNode(h* CL, listNode* old) {
 	listNode* pre;//삭제할 노드의 선행자 노드를 나타내는 포인터
 	if (CL->head == NULL)return;///공백 리스트인 경우 삭제 연산 중단
@@ -76,4 +76,50 @@ void deleteNode(h* CL, listNode* old) {
 		CL->head = NULL;//리스트 시작 포인터를 NULL로 설정
 		return;
 	}
+	else if (old == NULL)return;//삭제할 노드가 없는 경우 삭제 연산 중단
+	else {
+		pre = CL->head;//포인터 pre를 리스트의 시작 노드에 연결
+		while (pre->link != old) {//끝까지 돌린다 라는 꼴이다.
+			pre = pre->link;
+		}
+		pre->link = old->link;//끝까지 돌리면 pre값에 삭제할 노드를 대입한다.
+		if (old == CL->head) {
+			CL->head = old->link;
+		}
+		free(old);//삭제 노드의 메모리 해제
+	}
+}
+//원형 연결 리스트에서 x노드를 탐색하는 연산
+listNode* searchNode(h* CL, char* x) {
+	listNode* temp;
+	temp = CL->head;
+	if (temp == NULL)return NULL;
+	do {
+		if (strcmp(temp->data, x) == 0)return temp;
+		else temp = temp->link;
+	} while (temp != CL->head);
+	return NULL;
+}
+int main() {
+	h* CL;
+	listNode* p;
+	CL = createLinkedList_h();//공백 원형 연결 리스트 생성
+	printf("(1) 원형 연결 리스트 생성하기\n");
+	getchar();
+
+	printf("(2) 원형 연결 리스트에 [월]노드 삽입하기\n");
+	insertFirstNode(CL, "월");
+	printList(CL); getchar();
+	printf("(3) 원형 연결 리스트의 [월] 노드 뒤에 [수] 노드 삽입하기!\n");
+	p = searchNode(CL, "월"); insertMiddleNode(CL, p, "수");
+	printList(CL); getchar();
+
+	printf("(4) 원형 연결 리스트의 [수] 노드 뒤에 [금] 노드 삽입하기!\n");
+	p = searchNode(CL, "수"); insertMiddleNode(CL, p, "금");
+	printList(CL); getchar();
+
+	printf("(5) 원형 연결 리스트에서 [수] 노드 삭제하기!\n");
+	p = searchNode(CL, "수"); deleteNode(CL, p);
+	printList(CL); getchar();
+	return 0;
 }
