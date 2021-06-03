@@ -24,5 +24,8 @@
     <ClCompile Include="이중 연결리스트.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="연결리스트의 응용 및 구현.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
