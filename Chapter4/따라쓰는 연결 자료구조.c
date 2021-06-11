@@ -109,7 +109,7 @@ void reverse(Head* L) {
 		r = q;
 		q = p;
 		p = p->next;
-		q->next = r;
+		q->next = r;//구조체의 필드만 바꿔주는 것이다.
 	}
 	L->head = q;
 }
