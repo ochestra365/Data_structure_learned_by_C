@@ -54,3 +54,31 @@ element peek(QueueType* Q) {
 	if (isEmpty(Q))exit(1);
 	else return Q->queue[Q->front + 1];
 }
+
+//순차 큐의 원소를 출력하는 연산
+void printQ(Queue* Q) {
+	int i;
+	pritnf("Queue : [");
+	for (i = Q->front + 1; i <= Q->rear; i++) {
+		printf("%3c", Q->queue[i]);
+	}
+}
+void main(void) {
+	QueueType* Q1 = createQueue();//큐생성
+	element data;
+	pritnf("\n ****순차 큐 연산****\n");
+	printf("\n삽입 A>>"); enQueue(Q1, 'A'); printQ(Q1);
+	printf("\n삽입 B>>"); enQueue(Q1, 'B'); printQ(Q1);
+	printf("\n삽입 C>>"); enQueue(Q1, 'C'); printQ(Q1);
+	data = peek(Q1); printf("peek item : %c \n", data);
+	pritnf("\n삭제"); data = deQueue(Q1); printQ(Q1);
+	printf("\t삭제 데이터 : %c", data);
+	printf("\n삭제 >>"); data = deQueue(Q1); printQ(Q1);
+	printf("\t삭제 데이터 : %c", data);
+	printf("\n 삭제 >>"); data = deQueue(Q1); printQ(Q1);
+	printf("\t\t삭제 데이터 : %c", data);
+
+	printf("\n 삽입 D>>"); enQueue(Q1, 'D'); printQ(Q1);
+	printf("\n 삽입 E>>"); enQueue(Q1, 'E'); printQ(Q1);
+	getchar();
+}
