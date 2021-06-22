@@ -66,7 +66,7 @@ void printQ(Queue* Q) {
 void main(void) {
 	QueueType* Q1 = createQueue();//큐생성
 	element data;
-	pritnf("\n ****순차 큐 연산****\n");
+	printf("\n ****순차 큐 연산****\n");
 	printf("\n삽입 A>>"); enQueue(Q1, 'A'); printQ(Q1);
 	printf("\n삽입 B>>"); enQueue(Q1, 'B'); printQ(Q1);
 	printf("\n삽입 C>>"); enQueue(Q1, 'C'); printQ(Q1);
