@@ -15,7 +15,7 @@ int partition(int list[], int left, int right) {
 
 	low = left;
 	high = right;
-	pivot = list[left];// 정렬랄 리스트의 가장 왼쪽 데이터를 피벗으로 선택(임의의 값 선택)
+	pivot = list[left];// 정렬할 리스트의 가장 왼쪽 데이터를 피벗으로 선택(임의의 값 선택)
 /*low와 high가 교차할 때까지 반복(low<high)*/
 	do {
 		/*list[low]가 피벗보다 작으면 계속 low를 증가*/
