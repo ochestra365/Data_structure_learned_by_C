@@ -6,7 +6,7 @@
 #define MAX_VERTICES 5//그래프의 정점의 개수
 #define INF 10000
 
-int weight[MAX_VERTICES][MAX_VERTICES]{//그래프 G11의 가중치 인접 행렬
+int weight[MAX_VERTICES][MAX_VERTICES]={//그래프 G11의 가중치 인접 행렬
 	{0,10,5,INF,INF},
 	{INF,3,0,9,2},
 	{INF,INF,INF,0,4},
