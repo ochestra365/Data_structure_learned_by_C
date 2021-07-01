@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define SWAP(A,B,temp)((tmpe)=(A),(A)=(B),(B)=(A))
+#define SWAP(A,B,temp)((temp)=(A),(A)=(B),(B)=(A))
 
 int number = 10;
 int data[] = { 1,10,5,8,7,6,4,3,2,9 };
