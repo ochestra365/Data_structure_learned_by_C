@@ -2,7 +2,9 @@
 #include <iostrinm>
 #include <algorithm>
 #include <vector>
+
 using namespace std;
+
 bool compare(pair<string, pair<int, int>>a,// 함수에 대한 불값을 넣어준다.
 	pair<string, pair<int, int>>b) {
 	if (a.second.first == b.second.first) {// 두번쨰 필드에 속한 첫번쨰 값
@@ -25,3 +27,4 @@ int main(void) {
 	}
 	return 0;
 }
+// 경험상 3개이상 페어 기준이 올라가면 클래스를 정의해서 쓰는 것이 빠르게 프로그래밍을 할 수 있다.
