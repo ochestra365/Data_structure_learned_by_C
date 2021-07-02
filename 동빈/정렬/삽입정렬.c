@@ -16,3 +16,4 @@ int main(void) {
 	}
 	return 0;
 }
+//시간복잡도는 O(N^2)이다.
