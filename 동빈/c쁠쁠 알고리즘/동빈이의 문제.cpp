@@ -7,7 +7,7 @@ using namespace std;
 
 bool compare(pair<string, pair<int, int>>a,// 함수에 대한 불값을 넣어준다.
 	pair<string, pair<int, int>>b) {
-	if (a.second.first == b.second.first) {// 두번쨰 필드에 속한 첫번쨰 값
+	if (a.second.first == b.second.first) {// 두번쨰 필드에 속한 첫번쨰 값 성적이 같으면
 		return a.second.second > b.second.second;//더 어린학생이 우선순위
 	}
 	else {

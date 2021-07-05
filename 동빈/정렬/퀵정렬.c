@@ -28,8 +28,8 @@ void quickSort(int* data, int start, int end) {
 			SWAP(data[i], data[j], temp);
 		}
 	}
-	quickSort(data, start, j - 1);
-	quickSort(data, j + 1, end);
+	quickSort(data, start, j - 1);//좌측 파티션
+	quickSort(data, j + 1, end);//우측 파티션
 }
 int main(void) {
 	quickSort(data, 0, number - 1);//배열이니까 포인터로 지시

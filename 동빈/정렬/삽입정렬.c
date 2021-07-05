@@ -1,6 +1,7 @@
 //각 숫자를 적절한 위치에 삽입
 #include <stdio.h>
 #define SWAP(x,y,tmp) ((tmp)=(x),(x)=(y),(y)=(tmp))
+
 int main(void) {
 	int i, j, tmp;
 	int array[10] = { 1,10,5,8,7,6,4,3,2,9 };
